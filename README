@@ -1,0 +1,18 @@
+Execution process is as:
+
+1. compile and install the jar from the project pom
+   mvn clean install
+
+2. change directory to execute folder and run the test by using the pom, which references the testng.xml file
+   mvn clean test site jetty:run
+   
+3. open the report in the browser
+   http://localhost:9090
+   
+   Notes:
+   allure.report.remove.attachments has been set in 3 locations:
+   
+   1. src/main/resources
+   2. /execute/pom.xml includes -Dallure.report.remove.attachments
+   3. file: com.sample.reporter.StepBuilder.java line 86,87 
+  

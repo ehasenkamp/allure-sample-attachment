@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Demo remove screenshots" verbose="1" parallel="methods"
+	thread-count="10">
+
+	<test name="Load Allure">
+		<groups>
+			<run>
+				<include name="open-allure" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.sample.test" />
+		</packages>
+	</test>
+
+</suite>
